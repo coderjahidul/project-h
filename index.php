@@ -135,6 +135,7 @@ $b = 12145;
 
 $randomNumber = rand(); // Generate a random integer (not cryptographically secure)
 echo $randomNumber;
+$jahidul = "120";
 
 
 
