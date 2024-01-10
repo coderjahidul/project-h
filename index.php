@@ -133,24 +133,106 @@ $b = 12145;
 // printf("The octal equivalent of %d and %o", $b, $b);
 
 
-$randomNumber = rand(); // Generate a random integer (not cryptographically secure)
-echo $randomNumber;
-$jahidul = "120";
-echo "\n";
-$fname = "islam";
-$lname = "jahidul";
-$address = "laksham";
-printf('His name is %2$s %1$s and his address is %3$s', $fname, $lname, $address);
-echo "\n";
-$one = 1200;
-printf('The binary equivalent of %1$d is %1$b', $one);
+// $randomNumber = rand(); // Generate a random integer (not cryptographically secure)
+// echo $randomNumber;
+// $jahidul = "120";
+// echo "\n";
+// $fname = "islam";
+// $lname = "jahidul";
+// $address = "laksham";
+// printf('His name is %2$s %1$s and his address is %3$s', $fname, $lname, $address);
+// echo "\n";
+// $one = 1200;
+// printf('The binary equivalent of %1$d is %1$b', $one);
 
-echo "\n";
-$n = 38.127;
-printf("%.2f", $n);
-echo "\n";
-$m = 120.135;
-printf("%.2f", $m);
+// echo "\n";
+// $n = 38.127;
+// printf("%.2f", $n);
+// echo "\n";
+// $m = 120.135;
+// printf("%.2f", $m);
+// echo "\n";
+
+// $a = "120.145";
+// $b = "27.129";
+// printf("%07.2f \n", $a);
+// printf("%07.2f \n", $b);
+
+// $fname = "islam";
+// $lname = "jahidul";
+// $address = "laksham";
+// printf('His name is %2$s %1$s and his address is %3$s', $fname, $lname, $address);
+// echo "\n";
+// $number = 15;
+// printf('The binary equivalent of %1$d is %1$b', $number);
+
+// $n = 38.128;
+// printf("%.2f", $n);
+// $m = 125.326;
+// printf("%.2f", $m);
+
+$a = 120.145;
+$b = 27.129;
+printf("%07.2f \n", $a);
+printf("%07.2f \n", $b);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
