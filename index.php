@@ -136,11 +136,21 @@ $b = 12145;
 $randomNumber = rand(); // Generate a random integer (not cryptographically secure)
 echo $randomNumber;
 $jahidul = "120";
+echo "\n";
+$fname = "islam";
+$lname = "jahidul";
+$address = "laksham";
+printf('His name is %2$s %1$s and his address is %3$s', $fname, $lname, $address);
+echo "\n";
+$one = 1200;
+printf('The binary equivalent of %1$d is %1$b', $one);
 
-
-
-
-
+echo "\n";
+$n = 38.127;
+printf("%.2f", $n);
+echo "\n";
+$m = 120.135;
+printf("%.2f", $m);
 
 
 
