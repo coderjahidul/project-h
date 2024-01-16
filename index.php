@@ -175,7 +175,9 @@ $a = 120.145;
 $b = 27.129;
 printf("%07.2f \n", $a);
 printf("%07.2f \n", $b);
+echo phpinfo(
 
+);
 
 
 
