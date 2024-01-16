@@ -171,13 +171,68 @@ $b = 12145;
 // $m = 125.326;
 // printf("%.2f", $m);
 
-$a = 120.145;
-$b = 27.129;
-printf("%07.2f \n", $a);
-printf("%07.2f \n", $b);
-echo phpinfo(
+// $a = 120.145;
+// $b = 27.129;
+// printf("%07.2f \n", $a);
+// printf("%07.2f \n", $b);
+// echo phpinfo(
 
-);
+// );
+
+// $age = 18;
+// $message = ($age >= 18) ? "Your are Adult" : "Your are Child";
+// echo $message;
+
+// $age = 20;
+// $message = ($age >= 18) ? "Your are Adult" : "Your are Child";
+// echo $message;
+// echo "\n";
+// $age = 17;
+// $message = (18 <= $age) ? "Please Dawnload Now" : "You are too child";
+// echo $message;
+// $input = array('jahidul' => 'Web Developer');
+// $output = isset($input['jahidul']) ? $input['jahidul'] : null;
+// echo $output;
+
+// $item_id = isset($_GET['item_id']) ? $_GET['item_id'] : null;
+
+$color = "parple";
+// switch($color){
+//     case 'read':
+//         echo "Read is my favorite color";
+//         break;
+//     case 'blue':
+//         echo "Blue is my favorite color";
+//         break;
+//     case 'green':
+//         echo "Green is my favorite color";
+//         break;
+//     case 'yellow':
+//         echo "yellow is my favorite color";
+//         break;
+//     default :
+//         echo "I don't know";
+
+// }
+
+// switch($color){
+//     case 'green':
+//     case 'parple':
+//         echo "Green is my favorite color";
+//         break;
+//     case 'read':
+//         echo "Read is my favorite color";
+//         break;
+//     case 'blue':
+//         echo "Blue is my favorite color";
+//         break;
+//     case 'yellow':
+//         echo "Yellow is my favorite color";
+//         break;
+//     default:
+//         echo "I don't know";
+// }
+
 
 
 
