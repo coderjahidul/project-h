@@ -171,18 +171,116 @@ $b = 12145;
 // $m = 125.326;
 // printf("%.2f", $m);
 
-$a = 120.145;
-$b = 27.129;
-printf("%07.2f \n", $a);
-printf("%07.2f \n", $b);
+// $a = 120.145;
+// $b = 27.129;
+// printf("%07.2f \n", $a);
+// printf("%07.2f \n", $b);
 
 
+// class calculation{
+//     public $a, $b, $c;
 
+//     function sum(){
+//         $this->c = $this->b + $this->a;
+//         return $this->c;
+//     }
+//     function sub(){
+//         $this->c = $this->b - $this->a;
+//         return $this->c;
+//     }
+//     function mul(){
+//         $this->c = $this->b * $this->a;
+//         return $this->c;
+//     }
+//     function div(){
+//         $this->c = $this->b / $this->a;
+//         return $this->c;
+//     }
+// }
 
+// $c1 = new calculation();
+// $c1->a = 10;
+// $c1->b = 20;
 
+// echo $c1->div();
 
+// class calculation{
+//     public $a, $b, $c;
 
+//     function sum(){
+//         $this->c = $this->b + $this->a;
+//         return $this->c;
+//     }
+//     function sub(){
+//         $this->c = $this->b - $this->a;
+//         return $this->c;
+//     }
+//     function mul(){
+//         $this->c = $this->b * $this->a;
+//         return $this->c;
+//     }
+//     function div(){
+//         $this->c = $this->b / $this->a;
+//         return $this->c;
+//     }
+// }
 
+// $c1 = new calculation();
+// $c1->a = 20;
+// $c1->b = 30;
+
+// $c2 = new calculation();
+// $c2->a = 10;
+// $c2->b = 20;
+
+// $c3 = new calculation();
+// $c3->a = 5;
+// $c3->b = 3;
+
+// $c4 = new calculation();
+// $c4->a = 5;
+// $c4->b = 20;
+
+// echo "Sum Value: " . $c1->sum() . " Sub Value: " . $c2->sub() . " Mul Value: " . $c3->mul() . " Div Value: " . $c4->div();
+
+class calculation{
+    public $a, $b, $c;
+
+    function sum(){
+        $this->c = $this->b + $this->a;
+        return $this->c;
+    }
+    function sub(){
+        $this->c = $this->b - $this->a;
+        return $this->c;
+    }
+    function mul(){
+        $this->c = $this->b * $this->a;
+        return $this->c;
+    }
+    function div(){
+        $this->c = $this->b / $this->a;
+        return $this->c;
+    }
+}
+
+$c1 = new calculation();
+$c1->a = 20;
+$c1->b = 10;
+
+$c2 = new calculation();
+$c2->a = 20;
+$c2->b = 50;
+
+$c3 = new calculation();
+$c3->a = 5;
+$c3->b = 7;
+
+$c4 = new calculation();
+$c4->a = 5;
+$c4->b = 45;
+
+echo "Sum Value: " . $c1->sum() . " Sub Value: " . $c2->sub() . " Mul Value: " . $c3->mul() . " Div Value: " . $c4->div();
 
 
 
