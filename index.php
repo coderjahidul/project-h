@@ -404,30 +404,55 @@ $color = "parple";
 
 // $student = new StudentName("Jahidul Islam Sabuz", "Laksham");
 
-class Fruit {
-	public $name;
-	protected $color;
-	private $weight;
+// class Fruit {
+// 	public $name;
+// 	protected $color;
+// 	private $weight;
 
-	function set_name($n){
-		$this->name = $n;
+// 	function set_name($n){
+// 		$this->name = $n;
+// 	}
+
+// 	protected function set_color($n){
+// 		$this->color = $n;
+// 	}
+
+// 	private function set_weigth($n){
+// 		$this->set_weigth = $n;
+// 	}
+// }
+
+// $mango = new Fruit();
+// $mango->set_name = "Mango";
+// $mango->set_color = "Yellow";
+// $mango->set_weight = "300";
+
+class calculation {
+	public $a, $b, $c;
+
+	function sum(){
+		$this->c = $this->b + $this->a;
+		return $this->c;
 	}
-
-	protected function set_color($n){
-		$this->color = $n;
+	function sub(){
+		$this->c = $this->b - $this->a;
+		return $this->c;
 	}
-
-	private function set_weigth($n){
-		$this->set_weigth = $n;
+	function mul(){
+		$this->c = $this->b * $this->a;
+		return $this->c;
+	}
+	function div(){
+		$this->c = $this->b / $this->a;
+		return $this->c;
 	}
 }
 
-$mango = new Fruit();
-$mango->set_name = "Mango";
-$mango->set_color = "Yellow";
-$mango->set_weight = "300";
+$c1 = new calculation();
+$c1->a = 10;
+$c1->b = 20;
 
-
+echo $c1->div();
 
 
 
