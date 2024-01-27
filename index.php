@@ -233,29 +233,199 @@ $color = "parple";
 //         echo "I don't know";
 // }
 
+// class fruit {
+// 	// code goes here..
+// }
+
+// class fruit {
+// 	// Properties
+// 	public $name;
+// 	public $color;
+
+// 	// Methods
+// 	function set_name($name){
+// 		$this->name = $name;
+// 	}
+// 	function get_name(){
+// 		return $this->name;
+// 	}
+// }
+
+// $apple = new Fruit();
+// $banana = new Fruit();
+
+// $apple->set_name('Apple');
+// $banana->set_name('Banana');
+
+// echo $apple->get_name();
+// echo "<br>";
+// echo $banana->get_name();
 
 
+// class Fruit {
+// 	// Properties
+// 	public $name;
+// 	public $color;
+
+// 	// Methods
+// 	function set_name($name){
+// 		$this->name = $name;
+// 	}
+// 	function get_name(){
+// 		return $this->name;
+// 	}
+// 	function set_color($color){
+// 		$this->color = $color;
+// 	}
+// 	function get_color(){
+// 		return $this->color;
+// 	}
+// }
+
+// $apple = new Fruit();
+// $apple->set_name('Apple');
+// $apple->set_color('Red');
+
+// echo "Name: " . $apple->get_name();
+// echo "<br>";
+// echo "Color: " . $apple->get_color();
 
 
+// class Fruit {
+// 	// Properties
+// 	public $name;
+// 	// Methods
+// 	function set_name($name){
+// 		$this->name = $name;
+// 	}
+// }
+// $apple = new Fruit();
+// $apple->set_name("Apple");
+
+// echo $apple->name;
+
+// class Fruit {
+// 	// Properties
+// 	public $name;
+
+// 	// Methods
+// 	function set_name($name){
+// 		$this->name = $name;
+// 	}
+// }
+// $banana = new Fruit();
+// $banana->set_name("Banana");
+
+// echo $banana->name;
+
+// class Fruit {
+// 	// Properties
+// 	public $name;
+
+// 	// Methods
+// 	function set_name($name){
+// 		$this->name = $name;
+// 	}
+// }
+// $orange = new Fruit();
+// $orange->set_name("Orange");
+
+// echo $orange->name;
+
+// class Fruit {
+// 	public $name;
+// }
+// $apple = new Fruit();
+// $apple->name = "Apple";
+
+// echo $apple->name;
+
+// $apple = new Fruit();
+// var_dump($apple instanceof Fruit);
+
+// class Fruit {
+// 	public $name;
+// 	public $color;
+
+// 	function __construct($name){
+// 		$this->name = $name;
+// 	}
+
+// 	function __destruct(){
+// 		echo "The fruit is {$this->name}.";
+// 	}
+// }
+
+// $apple = new Fruit("Apple");
 
 
+// class Fruit {
+// 	public $name;
+// 	public $color;
 
+// 	function __construct($name){
+// 		$this->name = $name;
+// 	}
+// 	function __destruct(){
+// 		echo "The fruit is {$this->name}.";
+// 	}
+// }
 
+// $apple = new Fruit("Orange");
 
+// class Fruit {
+// 	public $name;
+// 	public $color;
 
+// 	function __construct($name, $color){
+// 		$this->name = $name;
+// 		$this->color = $color;
+// 	}
+// 	function __destruct(){
+// 		echo "The fruit is {$this->name} and its color is {$this->color}.";
+// 	}
+// }
+// $apple = new Fruit("Oradge", "Red");
+// echo "\n";
 
+// class StudentName {
+// 	public $name;
+// 	public $address;
 
+// 	function __construct($name, $address){
+// 		$this->name = $name;
+// 		$this->address = $address;
+// 	}
 
+// 	function __destruct(){
+// 		echo "This Student Name is {$this->name} and his address is {$this->address}";
+// 	}
+// }
 
+// $student = new StudentName("Jahidul Islam Sabuz", "Laksham");
 
+class Fruit {
+	public $name;
+	protected $color;
+	private $weight;
 
+	function set_name($n){
+		$this->name = $n;
+	}
 
+	protected function set_color($n){
+		$this->color = $n;
+	}
 
+	private function set_weigth($n){
+		$this->set_weigth = $n;
+	}
+}
 
-
-
-
-
+$mango = new Fruit();
+$mango->set_name = "Mango";
+$mango->set_color = "Yellow";
+$mango->set_weight = "300";
 
 
 
