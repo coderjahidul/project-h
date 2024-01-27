@@ -171,17 +171,85 @@ $b = 12145;
 // $m = 125.326;
 // printf("%.2f", $m);
 
-$a = 120.145;
-$b = 27.129;
-printf("%07.2f \n", $a);
-printf("%07.2f \n", $b);
+// $a = 120.145;
+// $b = 27.129;
+// printf("%07.2f \n", $a);
+// printf("%07.2f \n", $b);
+
+// $fname = "jahidul";
+// $lname = "islam";
+
+// $output = sprintf("His name is $fname $lname");
+// echo $output;
+
+// $n = 13;
+// if($n % 2 == 0){
+//     echo "$n is an even number";
+// }else {
+//     echo "$n is an odd number";
+// }
 
 
 
+// $year = 2016;
+// if($year % 4 == 0 && $year % 100 == 0 && $year % 400 == 0){
+//     echo "$year is a leap year";
+// }else if($year % 4 == 0 && $year % 100 == 0){
+//     echo "$year is not a leap year";
+// }else if($year % 4 == 0){
+//     echo "$year is a leap year";
+// }else {
+//     echo "$year is not a leap year";
+// }
+// echo "\n";
+
+// if(true || true){
+//     echo "WOW";
+// }
+
+
+// $f = true || false;
+// $e = false or true;
+
+// var_dump($f, $e);
+
+// class Fruit {
+//     public $name;
+//     public $color;
+
+//     function __construct($name){
+//         $this->name = $name;
+//     }
+//     function get_name(){
+//         return $this->name;
+//     }
+// }
+
+// $apple = new Fruit("Apple");
+// echo $apple->get_name();
 
 
 
+class Fruit {
+    public $name;
+    public $color;
 
+    function __construct($name, $color){
+        $this->name = $name;
+        $this->color = $color;
+    }
+    function get_name(){
+        return $this->name;
+    }
+    function get_color(){
+        return $this->color;
+    }
+}
+
+$apple = new Fruit("Apple", "red");
+echo $apple->get_name();
+echo "<br>";
+echo $apple->get_colro();
 
 
 
