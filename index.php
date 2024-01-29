@@ -438,71 +438,157 @@ $b = 12145;
 // }
 // $apple = new Fruit("Apple", "Green");
 
-class parson {
+// class parson {
+// 	public $name;
+// 	public $address;
+
+// 	function __construct($name, $address){
+// 		$this->name = $name;
+// 		$this->address = $address;
+// 	}
+
+// 	function __destruct(){
+// 		echo "This Parson Name Is: " . $this->name . " And His Address Is: " . $this->address . "\n";
+// 	}
+// }
+
+// $student = new parson('Jahidul Islam', 'Laksham');
+
+
+
+// class employee{
+// 	public $name;
+// 	public $age;
+// 	public $salary;
+
+// 	function __construct($name = "No Name", $age = 0, $salary = 0){
+// 		$this->name = $name;
+// 		$this->age = $age;
+// 		$this->salary = $salary;
+// 	}
+// 	function info(){
+// 		echo "<h3>Employee Information</h3>" . "\n";
+// 		echo "Employee Name: " . $this->name . "\n";
+// 		echo "Employee Age: " . $this->age . "\n";
+// 		echo "Employee Salary: " . $this->salary . "\n";
+// 	}
+// }
+// class manager extends employee{
+// 	public $travel_alliance = 1000;
+// 	public $phone_bill = 500;
+// 	public $totalSalary;
+// 	function info(){
+// 		$this->totalSalary = $this->salary + $this->travel_alliance + $this->phone_bill;
+// 		echo "<h3>Manager Information</h3>" . "\n";
+// 		echo "Manager Name: " . $this->name . "\n";
+// 		echo "Manager Age: " . $this->age . "\n";
+// 		echo "Manager Salary: " . $this->totalSalary . "\n" . "\n";
+// 	}
+// }
+
+// $employee1 = new manager("Jahidul Islam", 25, 25000);
+// $employee2 = new employee("Nasim Uddin", 20, 20000);
+
+// $employee1->info();
+// $employee2->info();
+
+// class employee{
+// 	public $name;
+// 	public $age;
+// 	public $address;
+// 	public $salary;
+
+// 	function __construct($name = "No Name", $age = 0, $address = "No Address", $salary = 0){
+// 		$this->name = $name;
+// 		$this->age = $age;
+// 		$this->address = $address;
+// 		$this->salary = $salary;
+// 	}
+// 	function info(){
+// 		echo "<h3>Employee Information</h3>" . "\n";
+// 		echo "Employee Name: " . $this->name . "\n";
+// 		echo "Employee Age: " . $this->age . "\n";
+// 		echo "Employee Address: " . $this->address . "\n";
+// 		echo "Employee Salary: " . $this->salary . "\n";
+// 	}
+// }
+// class manager extends employee{
+// 	public $travle_alliance = 1000;
+// 	public $phone_bill = 300;
+// 	public $totlaSalary;
+
+// 	function info(){
+// 		$this->totlaSalary = $this->salary + $this->travle_alliance + $this->phone_bill;
+
+// 		echo "<h3>Manager Information</h3>" . "\n";
+// 		echo "Manager Name: " . $this->name . "\n";
+// 		echo "Manager Age: " . $this->age . "\n";
+// 		echo "Manager Address: " . $this->address . "\n";
+// 		echo "Manager Salary: " . $this->totlaSalary . "\n" . "\n";
+// 	}
+// }
+
+// $employee1 = new manager("Jahidul Islam", 24, "Laksham", 25000);
+// $employee2 = new employee("Nasim Uddin", 20, "Cumilla", 12000);
+
+// $employee1->info();
+// $employee2->info();
+
+class employee{
 	public $name;
+	public $age;
 	public $address;
+	public $salary;
 
-	function __construct($name, $address){
+	function __construct($name = "No Name", $age = 20, $address = "No Address", $salary = 0){
 		$this->name = $name;
+		$this->age = $age;
 		$this->address = $address;
+		$this->salary = $salary;
 	}
+	function info(){
+		echo "<h3>Employee Information</h3>" . "\n";
+		echo "Employee nameL: " . $this->name . "\n";
+		echo "Employee Age: " . $this->age . "\n";
+		echo "Employee Address:  " . $this->address . "\n";
+		echo "Employee Salary: "  . $this->salary . "\n" . "\n";
+	}
+}
+class manager extends employee{
+	public $travle_alliance = 2500;
+	public $phone_bill = 500;
+	public $totalSalary;
 
-	function __destruct(){
-		echo "This Parson Name Is: " . $this->name . " And His Address Is: " . $this->address . "\n";
+	function info(){
+		$this->totalSalary = $this->salary + $this->travle_alliance + $this->phone_bill;
+
+		echo "<h3>Manager Information</h3>" . "\n";
+		echo "Manager Name: " . $this->name . "\n";
+		echo "Manager Age: " . $this->age . "\n";
+		echo "Manager Address: " . $this->address . "\n";
+		echo "Manager Salary: " . $this->totalSalary . "\n" . "\n";
 	}
 }
 
-$student = new parson('Jahidul Islam', 'Laksham');
+class hr extends manager{
+	public $house_rent = 5000;
+	public $health_insurance = 1050;
 
+	function info(){
+		$this->totalSalary = $this->salary + $this->travle_alliance + $this->phone_bill + $this->house_rent + $this->health_insurance;
 
+		echo "<h3>HR Information</h3>" . "\n";
+		echo "HR Name: " . $this->name . "\n";
+		echo "HR Age: " . $this->age . "\n";
+		echo "HR Address: " . $this->address . "\n";
+		echo "HR Salary: " . $this->totalSalary . "\n" . "\n";
+	}
+}
 
+$employee1 = new manager("Jahidul Islam", 24, "Laksham", 25000);
+$employee2 = new employee("Nasim Uddin", 20, "Cumilla", 12000);
+$employee3 = new HR("Momtian Ahmed", 24, "Cumilla", 15000);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$employee1->info();
+$employee2->info();
+$employee3->info();
