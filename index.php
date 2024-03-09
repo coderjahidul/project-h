@@ -124,7 +124,7 @@
 // echo "\n";
 // printf("The Octal equivalent of %d is %o", 27, 27);
 
-$b = 12145;
+// $b = 12145;
 
 // printf("The bunary equivalent of %d and %b",$b, $b);
 // echo "\n";
@@ -282,443 +282,553 @@ $b = 12145;
 
 // echo "Sum Value: " . $c1->sum() . " Sub Value: " . $c2->sub() . " Mul Value: " . $c3->mul() . " Div Value: " . $c4->div();
 
-// class calculation{
-// 	public $a, $b, $c;
+// class employee{
+//     public $name;
+//     public $age;
+//     public $address;
+//     public $salary;
 
-// 	function sum(){
-// 		$this->c = $this->b + $this->a;
-// 		return $this->c;
-// 	}
-// 	function sub(){
-// 		$this->c = $this->b - $this->a;
-// 		return $this->c;
-// 	}
-// 	function mul(){
-// 		$this->c = $this->b * $this->a;
-// 		return $this->c;
-// 	}
-// 	function div(){
-// 		$this->c = $this->b / $this->a;
-// 		return $this->c;
-// 	}
+//     function __construct($name = "No Name", $age = 0, $address = "No Address", $salary = 0){
+//         $this->name = $name;
+//         $this->age = $age;
+//         $this->address = $address;
+//         $this->salary = $salary = $salary;
+//     }
+//     function info(){
+//         echo "<h3>Employee Information</h3>" . "\n";
+//         echo "Employee Name: " . $this->name . "\n";
+//         echo "Employee Age: " . $this->age . "\n";
+//         echo "Employee Address: " . $this->address . "\n";
+//         echo "Employee Salary: " . $this->salary . "\n" . "\n";
+//     }
+// }
+// class manager extends employee{
+//     public $travel_allowance = 1000;
+//     public $phone_bill = 500;
+//     public $total_salary;
+
+//     function info(){
+//         $this->total_salary = $this->salary + $this->travel_allowance + $this->phone_bill;
+
+//         echo "<h3>Manager Information </h3>" . "\n";
+//         echo "Manager Name: " . $this->name . "\n";
+//         echo "Manager Age: " . $this->age . "\n";
+//         echo "Manager Address: " . $this->address . "\n";
+//         echo "Manager Salary: " . $this->total_salary . "\n" . "\n";
+//     }
 // }
 
-// $c1 = new calculation();
-// $c1->a = 20;
-// $c1->b = 20;
+// $employee1 = new employee("Jahidul Islam", 20, "Cumilla, Laksham", 12000);
+// $employee2 = new manager("Najmul Hossain", 20, "Dhaka", 50000);
 
-// $c2 = new calculation();
-// $c2->a = 50;
-// $c2->b = 20;
+// $employee1->info();
+// $employee2->info();
 
-// $c3 = new calculation();
-// $c3->a = 50;
-// $c3->b = 5;
+// php oop access modifire
 
-// $c4 = new calculation();
-// $c4->a = 50;
-// $c4->b = 5;
-
-// echo "Sun Value: " . $c1->sum() . " Sub Value: " . $c2->sub() . " Mul Value: " . $c3->mul() . " Div Value: " . $c4->div();
-
-// class parson{
-// 	public $name;
-// 	public $age;
-
-// 	function __construct($name = "No Name", $age = 0){
-// 		$this->name = $name;
-// 		$this->age = $age;
-// 	}
-
-// 	function show(){
-// 		echo "Your Name: " . $this->name . " -" . " Your Age: " . $this->age . "\n";
-// 	}
+// class base{
+//     private $name;
+//     public function __construct($name){
+//         $this->name = $name;
+//     }
+//     protected function show(){
+//         echo "Your Name: " . $this->name . "\n";
+//     }
 // }
-// $p1 = new parson("Jahidul Islam", 25);
-// $p2 = new parson("Nasim Uddin", 20);
-// $p3 = new parson();
-// $p4 = new parson("Momtian Ahmed", 24);
-
-// $p1->show();
-// $p2->show();
-// $p3->show();
-// $p4->show();
-
-// class parson{
-// 	public $name, $age;
-
-// 	function __construct($name = "No Name", $age = 0){
-// 		$this->name = $name;
-// 		$this->age = $age;
-// 	}
-// 	function show(){
-// 		echo "Your Name: " . $this->name . " - " . " Your Age: " . $this->age . "\n";
-// 	}
+// class drived extends base{
+//     public function get(){
+//         echo "Your Name: " . $this->name . "\n";
+//     }
 // }
+ 
+// $test = new drived("jahidul islam sabuz");
 
-// $p1 = new parson();
-// $p2 = new parson("Jahidul Islam", 25);
-// $p3 = new parson("Nasim Uddin", 20);
-// $p4 = new parson("Momtian Ahmed", 24);
 
-// $p1->show();
-// $p2->show();
-// $p3->show();
-// $p4->show();
 
-// class studentList{
-// 	public $name;
-// 	public $age;
-	
-// 	function __construct($name = "No Name", $age = 0){
-// 		$this->name = $name;
-// 		$this->age = $age;
-// 	}
-// 	function show(){
-// 		echo "Student Name: " . $this->name . " - " . " Student Age: " . $this->age . "\n";
-// 	}
+// $test->name = "najmul hossain";
 
+// $test->get();
+
+
+// class student{
+//     //properties
+//     public $name;
+//     public $age;
+
+//     //methods
+//     function set_name($name){
+//         $this->name = $name;
+//     }
+//     function set_age($age){
+//         $this->age = $age;
+//     }
+
+//     function get_name(){
+//         return $this->name;
+//     }
+//     function get_age(){
+//         return $this->age;
+//     }
 // }
 
-// $student1 = new studentList("Jahidul Islam", 25);
-// $student2 = new studentList("Nasim Uddin", 20);
-// $student3 = new studentList();
-// $student4 = new studentList("Momtian Ahmed", 24);
+// $student = new student();
+// $student->set_name('Jahidul Islam Sabuz');
+// $student->set_age(24);
 
-// $student1->show();
-// $student2->show();
-// $student3->show();
-// $student4->show();
+// echo "Name: " . $student->get_name();
+// echo "Age: " . $student->get_age();
+
+
+// class student{
+//     public $name;
+//     public $age;
+
+//     function __construct($name = "No Name", $age = 0){
+//         $this->name = $name;
+//         $this->age = $age;
+//     }
+
+//     function info(){
+//         echo "Student Name: " . $this->name . "\n";
+//         echo "Student Age: " . $this->age . "\n";
+//     }
+// }
+
+// $student1 = new student("Jahidul Islam Sabuz", 24);
+// $student1->info();
+
+// class student{
+//     public $name;
+//     public $age;
+//     public $address;
+
+//     function __construct($name = "No Name", $age = 0, $address = "No Address"){
+//         $this->name = $name;
+//         $this->age = $age;
+//         $this->address = $address;
+//     }
+//     function __destruct(){
+//         echo "Student Name: " . $this->name . "\n";
+//         echo "Student Age: " . $this->age . "\n";
+//         echo "Student Address: " . $this->address . "\n" . "\n";
+//     }
+// }
+
+// $student1 = new student("Jahidul Islam Sabuz", 23, "Dhaka, Bangladesh");
+// $student2 = new student("Siful Islam Shagor", 25, "Cumilla, Laksham");
+// $student3 = new student("Nasim Uddin Emon", 22, "Laksham");
+
+// class employee{
+//     public $name;
+//     public $age;
+//     public $address;
+//     public $salary;
+    
+//     function __construct($name = "No Name", $age = 0, $address = "No Address", $salary = 0){
+//         $this->name = $name;
+//         $this->age = $age;
+//         $this->address = $address;
+//         $this->salary = $salary;
+//     }
+
+//     function __destruct(){
+//         echo "Employee Name: " . $this->name . "\n";
+//         echo "Employee Age: " . $this->age . "\n";
+//         echo "Employee Address: " . $this->address . "\n";
+//         echo "Employee Salary: " . $this->salary . "\n" . "\n";
+//     }
+// }
+
+// $employee1 = new employee("Jahidul Islam Sabuz", 23, "Dhaka, Bangladesh", 50000);
+// $employee2 = new employee("Siful Islam Shagor", 25, "Cumilla, Laksham", 6000);
+// $employee3 = new employee("Nasim Uddin Emon", 22, "Laksham", 5000);
+
 
 // class Fruit{
-// 	public $name;
-// 	public $color;
+//     public $name;
+//     protected $color;
+//     private $weight;
 
-// 	function __construct($name = "No Name", $color = "No Color"){
-// 		$this->name = $name;
-// 		$this->color = $color;
-// 	}
-// 	function get_name(){
-// 		return $this->name;
-// 	}
-// 	function get_color(){
-// 		return $this->color;
-// 	}
+//     function set_name($name){
+//         $this->name = $name;
+//     }
+//     function set_color(){
+//         $this->color = $color;
+//     }
+//     function set_weight(){
+//         $this->weight = $weight;
+//     }
+
+//     function get_name(){
+//         echo "The name of the fruit is: " . $this->name . "\n";
+//     }
+//     function get_color(){
+//         echo "The color of the fruit is: " . $this->color . "\n";
+//     }
+//     function get_weight(){
+//         echo "The weight of the fruit is: " . $this->weight . "\n";
+//     }
+// }
+// $mango = new Fruit();
+// $mango->name = "Mango";
+// $mango->color = "Yellow";
+// $mango->weight = "300";
+
+// $mango->get_name();
+// $mango->get_color();
+// $mango->get_weight();
+
+// protected
+// class base{
+//     protected $name;
+
+//     public function __construct($name){
+//         $this->name = $name;
+//     }
+//     protected function show(){
+//         echo "Your Name: " . $this->name . "\n";
+//     }
 // }
 
-// $orange = new Fruit("Orange", "Green");
-// echo $orange->get_name();
-// echo "\n";
-// echo $orange->get_color();
-
-// class Fruit {
-// 	public $name;
-// 	public $color;
-
-// 	function __construct($name){
-// 		$this->name = $name;
-// 	}
-// 	function __destruct(){
-// 		echo "The fruit is {$this->name}.";
-// 	}
+// class derived extends base{
+//     public function get(){
+//         echo "Your Name: " . $this->name . "\n";
+//     }
 // }
-// $apple = new Fruit("Mango");
-
-// class Fruit {
-// 	public $name;
-// 	public $color;
-
-// 	function __construct($name, $color){
-// 		$this->name = $name;
-// 		$this->color = $color;
-// 	}
-// 	function __destruct(){
-// 		echo "The fruit is {$this->name} and the color is {$this->color}.";
-// 	}
-// }
-// $apple = new Fruit("Apple", "Green");
-
-// class parson {
-// 	public $name;
-// 	public $address;
-
-// 	function __construct($name, $address){
-// 		$this->name = $name;
-// 		$this->address = $address;
-// 	}
-
-// 	function __destruct(){
-// 		echo "This Parson Name Is: " . $this->name . " And His Address Is: " . $this->address . "\n";
-// 	}
-// }
-
-// $student = new parson('Jahidul Islam', 'Laksham');
-
-
-
-// class employee{
-// 	public $name;
-// 	public $age;
-// 	public $salary;
-
-// 	function __construct($name = "No Name", $age = 0, $salary = 0){
-// 		$this->name = $name;
-// 		$this->age = $age;
-// 		$this->salary = $salary;
-// 	}
-// 	function info(){
-// 		echo "<h3>Employee Information</h3>" . "\n";
-// 		echo "Employee Name: " . $this->name . "\n";
-// 		echo "Employee Age: " . $this->age . "\n";
-// 		echo "Employee Salary: " . $this->salary . "\n";
-// 	}
-// }
-// class manager extends employee{
-// 	public $travel_alliance = 1000;
-// 	public $phone_bill = 500;
-// 	public $totalSalary;
-// 	function info(){
-// 		$this->totalSalary = $this->salary + $this->travel_alliance + $this->phone_bill;
-// 		echo "<h3>Manager Information</h3>" . "\n";
-// 		echo "Manager Name: " . $this->name . "\n";
-// 		echo "Manager Age: " . $this->age . "\n";
-// 		echo "Manager Salary: " . $this->totalSalary . "\n" . "\n";
-// 	}
-// }
-
-// $employee1 = new manager("Jahidul Islam", 25, 25000);
-// $employee2 = new employee("Nasim Uddin", 20, 20000);
-
-// $employee1->info();
-// $employee2->info();
-
-// class employee{
-// 	public $name;
-// 	public $age;
-// 	public $address;
-// 	public $salary;
-
-// 	function __construct($name = "No Name", $age = 0, $address = "No Address", $salary = 0){
-// 		$this->name = $name;
-// 		$this->age = $age;
-// 		$this->address = $address;
-// 		$this->salary = $salary;
-// 	}
-// 	function info(){
-// 		echo "<h3>Employee Information</h3>" . "\n";
-// 		echo "Employee Name: " . $this->name . "\n";
-// 		echo "Employee Age: " . $this->age . "\n";
-// 		echo "Employee Address: " . $this->address . "\n";
-// 		echo "Employee Salary: " . $this->salary . "\n";
-// 	}
-// }
-// class manager extends employee{
-// 	public $travle_alliance = 1000;
-// 	public $phone_bill = 300;
-// 	public $totlaSalary;
-
-// 	function info(){
-// 		$this->totlaSalary = $this->salary + $this->travle_alliance + $this->phone_bill;
-
-// 		echo "<h3>Manager Information</h3>" . "\n";
-// 		echo "Manager Name: " . $this->name . "\n";
-// 		echo "Manager Age: " . $this->age . "\n";
-// 		echo "Manager Address: " . $this->address . "\n";
-// 		echo "Manager Salary: " . $this->totlaSalary . "\n" . "\n";
-// 	}
-// }
-
-// $employee1 = new manager("Jahidul Islam", 24, "Laksham", 25000);
-// $employee2 = new employee("Nasim Uddin", 20, "Cumilla", 12000);
-
-// $employee1->info();
-// $employee2->info();
-
-// class employee{
-// 	public $name;
-// 	public $age;
-// 	public $address;
-// 	public $salary;
-
-// 	function __construct($name = "No Name", $age = 20, $address = "No Address", $salary = 0){
-// 		$this->name = $name;
-// 		$this->age = $age;
-// 		$this->address = $address;
-// 		$this->salary = $salary;
-// 	}
-// 	function info(){
-// 		echo "<h3>Employee Information</h3>" . "\n";
-// 		echo "Employee nameL: " . $this->name . "\n";
-// 		echo "Employee Age: " . $this->age . "\n";
-// 		echo "Employee Address:  " . $this->address . "\n";
-// 		echo "Employee Salary: "  . $this->salary . "\n" . "\n";
-// 	}
-// }
-// class manager extends employee{
-// 	public $travle_alliance = 2500;
-// 	public $phone_bill = 500;
-// 	public $totalSalary;
-
-// 	function info(){
-// 		$this->totalSalary = $this->salary + $this->travle_alliance + $this->phone_bill;
-
-// 		echo "<h3>Manager Information</h3>" . "\n";
-// 		echo "Manager Name: " . $this->name . "\n";
-// 		echo "Manager Age: " . $this->age . "\n";
-// 		echo "Manager Address: " . $this->address . "\n";
-// 		echo "Manager Salary: " . $this->totalSalary . "\n" . "\n";
-// 	}
-// }
-
-// class hr extends manager{
-// 	public $house_rent = 5000;
-// 	public $health_insurance = 1050;
-
-// 	function info(){
-// 		$this->totalSalary = $this->salary + $this->travle_alliance + $this->phone_bill + $this->house_rent + $this->health_insurance;
-
-// 		echo "<h3>HR Information</h3>" . "\n";
-// 		echo "HR Name: " . $this->name . "\n";
-// 		echo "HR Age: " . $this->age . "\n";
-// 		echo "HR Address: " . $this->address . "\n";
-// 		echo "HR Salary: " . $this->totalSalary . "\n" . "\n";
-// 	}
-// }
-
-// $employee1 = new manager("Jahidul Islam", 24, "Laksham", 25000);
-// $employee2 = new employee("Nasim Uddin", 20, "Cumilla", 12000);
-// $employee3 = new HR("Momtian Ahmed", 24, "Cumilla", 15000);
-
-// $employee1->info();
-// $employee2->info();
-// $employee3->info();
-
-// class employee{
-// 	public $name;
-// 	public $age;
-// 	public $address;
-// 	public $salary;
-
-// 	function __construct($name = "No Name", $age = 0, $address = "No Address", $salary = 0){
-// 		$this->name = $name;
-// 		$this->age = $age;
-// 		$this->address = $address;
-// 		$this->salary = $salary;
-// 	}
-
-// 	function info(){
-// 		echo "<h3>Employee Information</h3>" . "\n";
-// 		echo "Employee Name: " . $this->name . "\n";
-// 		echo "Employee Age: " . $this->age . "\n";
-// 		echo "Employee Address: " . $this->address . "\n";
-// 		echo "Employee Salary: " . $this->salary . "\n" . "\n";
-// 	}
-// }
-
-// class HR extends employee{
-// 	public $travel_alliance = 1000;
-// 	public $phone_bill = 500;
-// 	public $totalSalary;
-
-// 	function info(){
-// 		$this->totalSalary = $this->salary + $this->travel_alliance + $this->phone_bill;
-
-// 		echo "<h3>HR Information</h3>" . "\n";
-// 		echo "HR Name: " . $this->name . "\n";
-// 		echo "HR Age: " . $this->age . "\n";
-// 		echo "HR Address: " . $this->address . "\n";
-// 		echo "HR Salary: " . $this->totalSalary . "\n" . "\n";
-// 	}
-// }
-
-// class manager extends HR{
-// 	public $house_alliance = 5000;
-// 	public $health_insurance = 5000;
-
-
-// 	function info(){
-// 		$this->totlaSalary = $this->salary + $this->travel_alliance + $this->phone_bill + $this->house_alliance + $this->health_insurance;
-
-// 		echo "<h3>Manager Information</h3>" . "\n";
-// 		echo "Manager Name: " . $this->name . "\n";
-// 		echo "Manager Age: " . $this->age . "\n";
-// 		echo "Manager Address: " . $this->address . "\n";
-// 		echo "Manager Salary: " . $this->totlaSalary . "\n" . "\n";
-// 	}
-// }
-
-// $employess1 = new employee("Momtain Ahamad Rifat", 24, "Cumilla, Lalsham", 25000);
-// $HR = new HR("Nassim Uddin Emon", 22, "Laksham, Batakhali", 27000);
-// $manager = new manager("Jahidul Islam Sabuz", 24, "Norda, Dhaka", 30000);
-
-// $employess1->info();
-// $HR->info();
-// $manager->info();
+// $test = new derived("jahidul islam");
+// // $test->name = "najmul hossain";
+// $test->get();
 
 // Public function
+// class MyClass{
+//     public function myPublicFunction(){
+//         echo "This is a public function.\n";
+//     }
+// }
+// $obj = new MyClass();
+// $obj ->mypublicFunction();
+
+
+// Protected function
 // class MyClass {
-// 	public function myPublicFunction(){
-// 		echo "This is a Public Function.";
-// 	}
+//     protected function myProtectedFunction(){
+//         echo "This is a protected function.\n";
+//     }
+// }
+// $obj = new MyClass();
+// // $obj->myProtectedFunction();
+
+// class MySubClass extends MyClass {
+//     public function callProtectedFunction(){
+//         $this->myProtectedFunction();
+//     }
+// }
+
+// $subObj = new MysubClass();
+// $subObj->callProtectedFunction();
+
+// class MyClass {
+//     protected function myProtectedFunction(){
+//         echo "This is a protected function.\n";
+//     }
+// }
+
+// class MySubClass extends MyClass {
+//     public function callProtectedFunction(){
+//         $this->myProtectedFunction();
+//     }
+// }
+// $subObj = new MySubClass();
+// $subObj->callProtectedFunction();
+
+
+// private function 
+// class MyClass{
+//     private function myPrivateFunction(){
+//         echo "This is a private function.\n";
+//     }
+//     public function callPrivateFunction(){
+//         $this->myPrivateFunction();
+//     }
+// }
+
+// $obj = new MyClass();
+// $obj->callPrivateFunction();
+
+
+// Public Function 
+// class MyClass {
+//     public function myPublicFunction(){
+//         echo "This is a public function. \n";
+//     }
 // }
 // $obj = new MyClass();
 // $obj->myPublicFunction();
 
-// protected function 
-// class MyClass {
-// 	protected function myProtectedFunction(){
-// 		echo "This is a Protected Function.";
-// 	}
+// Protected
+// class MyClass{
+//     protected function MyProtectedFunction(){
+//         echo "This is a protected function. \n";
+//     }
 // }
-
-// class mySubClass extends MyClass{
-// 	public function callMyProtectedFunction(){
-// 		$this->myProtectedFunction();
-// 	}
+// class MySubClass extends MyClass{
+//     public function CallMyProtectedFunction(){
+//         $this->MyProtectedFunction();
+//     }
 // }
-// $obj = new mySubClass();
-// $obj->callMyProtectedFunction();
+// $subObj = new MySubClass();
+// $subObj->CallMyProtectedFunction();
 
-// private function
-// class MyClass {
-// 	private function myprivateFunction(){
-// 		echo "This is a Private Function.";
-// 	}
-// 	public function callMyPrivateFunction(){
-// 		$this->myprivateFunction();
-// 	}
+// Privat
+// class MyClass{
+//     private function MyPrivatFunction(){
+//         echo "This is a Private function. \n";
+//     }
+//     public function callMyPrivateFunction(){
+//         $this->MyPrivatFunction();
+//     }
 // }
 // $obj = new MyClass();
 // $obj->callMyPrivateFunction();
 
-// Override Proparty
+// public funcion
+// class MyClass{
+//     public function MyPublicFunction(){
+//         echo "This is a public function.";
+//     }
+// }
+// $obj = new MyClass();
+// $obj->MyPublicFunction();
+
+// Protected function
+// class MyClass{
+//     protected function MyProtectedFunction(){
+//         echo "This is a Protected Function.";
+//     }
+// }
+// $oba = new MyClass();
+
+// class MySubClass extends MyClass{
+//     public function CallMyProtectedFunction(){
+//         $this->MyProtectedFunction();
+//     }
+// }
+
+// $subObj = new MySubClass();
+// $subObj->CallMyProtectedFunction();
+
+// Private function
+// class MyClass {
+//     Private function MyPrivateFunction(){
+//         echo "This is a Private Function";
+//     }
+//     public function callPrivateFunction(){
+//         $this->MyPrivateFunction();
+//     }
+// }
+
+// $obj = new MyClass();
+// $obj->callPrivateFunction();
+
+// class MyClass {
+//     public function __construct(){
+//         echo "Constructor Called.";
+//     }
+//     public function __destruct(){
+//         echo "Destructor called.";
+//     }
+// }
+// $obj = new MyClass();
+
+// class Animal {
+//     public function makeSound(){
+//         echo "Generic animal sound \n";
+//     }
+// }
+
+// class Dog extends Animal {
+//     public function makeSound(){
+//         echo "Woof! Woof!";
+//     }
+// }
+
+// $animal = new Animal();
+// $animal->makeSound();
+
+// $dog = new Dog();
+// $dog->makeSound();
+
+// class MyClass {
+//     private $myProperty;
+
+//     public function getMyProperty(){
+//         return $this->myProperty;
+//     }
+//     public function setMyProperty($value){
+//         $this->myProperty = $value;
+//     }
+// }
+// $obj = new MyClass();
+// $obj->setMyProperty("Hello");
+// echo $obj->getMyProperty();
+
+// class MyClass {
+//     private $data = [];
+
+//     public function __set($name, $value){
+//         $this->data[$name] = $value;
+//     }
+
+//     public function __get($name){
+//         return $this->data[$name] ?? null;
+//     }
+// }
+
+// $obj = new MyClass();
+// $obj->propertyName = "Magic Setter";
+// echo $obj->propertyName;
+
+// class Fruit {
+//     public $name;
+//     public $color;
+
+//     public function __construct($name, $color){
+//         $this->name = $name;
+//         $this->color = $color;
+//     }
+
+//     public function intro(){
+//         echo "The fruit is {$this->name} and the color is {$this->color}.";
+//     }
+// }
+
+// $strawberry = new Fruit("Banana", "Yellow");
+// $strawberry->intro();
+
+
+// Strawberry is inherited from Fruit
+// class Strawberry extends Fruit {
+//     public function message(){
+//         echo "Am I a fruit or a berry? ";
+//     }
+// }
+// $strawberry = new Strawberry("Strawberry", "red");
+// $strawberry->message();
+// $strawberry->intro();
+
+// Overriding properties
 // class base {
-// 	public $name = "Jahidul Islam";
-// 	public $age = 12;
-// }
-// class derive extends base {
-// 	public function info(){
-// 		echo "My Name Is " . $this->name . " And My Age Is " . $this->age . "\n";
-// 	}
+//     public $name = "Jahidul Islam";
+
+//     public function cal($a = 0, $b = 0){
+//         return $a * $b;
+//     }
 // }
 
-// $obj = new derive();
-// $obj->info();
+// class derived extends base{
+//     public $name = "Nasim Uddin";
 
-class base {
-	public $name = "Jahidul Islam";
-	public $age = 12;
-	public function info(){
-		echo "My Name Is " . $this->name . " And My Age Is " . $this->age . "\n";
+//     public function cal($a = 0, $b = 0){
+//         return $a + $b;
+//     }
+// }
+// $test = new derived();
+// echo $test->cal();
+
+// Overriding methods
+// class base {
+//     public function cal($a = 0, $b = 0){
+//         return $a * $b;
+//     }
+// }
+// class derived extends base {
+//     public function cal($a = 0, $b = 0){
+//         return $a + $b;
+//     }
+// }
+
+// $test = new base();
+// $test->cal(10, 4);
+
+// $test1 = new derived();
+// $test1->cal(10, 4);
+
+// for($i=0; $i<100; $i++){
+//     if($i % 7 == 0) echo $i."\n";
+//     if($i % 11 == 0) echo $i."\n";
+// }
+
+// for($i=0; $i<100; $i++){
+//     echo $i % 7 == 0 ? $i. "\n":'';
+//     echo $i % 11 == 0 ? $i. "\n":'';
+// }
+
+// for($i = 0, $j = 0; $i < 100; $i+=7, $j+=11){
+//     echo $i. "\n";
+//     echo $j < 100 ? $j . "\n":'';
+// }
+
+// $employee1 = new manager("Jahidul Islam", 24, "Laksham", 25000);
+// $employee2 = new employee("Nasim Uddin", 20, "Cumilla", 12000);
+
+// $employee1->info();
+// $employee2->info();
+
+class employee{
+	public $name;
+	public $age;
+	public $address;
+	public $salary;
+
+	function __construct($name = "No Name", $age = 20, $address = "No Address", $salary = 0){
+		$this->name = $name;
+		$this->age = $age;
+		$this->address = $address;
+		$this->salary = $salary;
+	}
+	function info(){
+		echo "<h3>Employee Information</h3>" . "\n";
+		echo "Employee nameL: " . $this->name . "\n";
+		echo "Employee Age: " . $this->age . "\n";
+		echo "Employee Address:  " . $this->address . "\n";
+		echo "Employee Salary: "  . $this->salary . "\n" . "\n";
 	}
 }
-class derive extends base {
-	public function info(){
-		echo "Your Name Is " . $this->name . " And Your Age Is " . $this->age . "\n";
+class manager extends employee{
+	public $travle_alliance = 2500;
+	public $phone_bill = 500;
+	public $totalSalary;
+
+	function info(){
+		$this->totalSalary = $this->salary + $this->travle_alliance + $this->phone_bill;
+
+		echo "<h3>Manager Information</h3>" . "\n";
+		echo "Manager Name: " . $this->name . "\n";
+		echo "Manager Age: " . $this->age . "\n";
+		echo "Manager Address: " . $this->address . "\n";
+		echo "Manager Salary: " . $this->totalSalary . "\n" . "\n";
 	}
 }
-$obj = new base();
-$obj->info();
-echo "\n";
-$obj1 = new derive();
-$obj1->info();
+
+class hr extends manager{
+	public $house_rent = 5000;
+	public $health_insurance = 1050;
+
+	function info(){
+		$this->totalSalary = $this->salary + $this->travle_alliance + $this->phone_bill + $this->house_rent + $this->health_insurance;
+
+		echo "<h3>HR Information</h3>" . "\n";
+		echo "HR Name: " . $this->name . "\n";
+		echo "HR Age: " . $this->age . "\n";
+		echo "HR Address: " . $this->address . "\n";
+		echo "HR Salary: " . $this->totalSalary . "\n" . "\n";
+	}
+}
+
+$employee1 = new manager("Jahidul Islam", 24, "Laksham", 25000);
+$employee2 = new employee("Nasim Uddin", 20, "Cumilla", 12000);
+$employee3 = new HR("Momtian Ahmed", 24, "Cumilla", 15000);
+
+$employee1->info();
+$employee2->info();
+$employee3->info();
