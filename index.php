@@ -1033,135 +1033,164 @@
 
 
 // strlan function
-$str = "Hello, World!";
-echo strlen($str); // outputs 13
-echo "\n";
-$str = "     ";
-echo strlen($str); // Outputs 5
-echo "\n";
-$str = "";
-echo strlen($str); // Outputs 0
-echo "\n";
-$str = "!Hola!";
-echo strlen($str); // Outputs 6
-echo "\n";
+// $str = "Hello, World!";
+// echo strlen($str); // outputs 13
+// echo "\n";
+// $str = "     ";
+// echo strlen($str); // Outputs 5
+// echo "\n";
+// $str = "";
+// echo strlen($str); // Outputs 0
+// echo "\n";
+// $str = "!Hola!";
+// echo strlen($str); // Outputs 6
+// echo "\n";
 
 
-// str replace php function
-// Example 1: Basic String Replacement
-$originalString = "Hello, world!";
-$search = "world";
-$replace = "PHP";
-$newString = str_replace($search, $replace, $originalString);
-echo $newString; // Outputs "Hello, PHP!"
-echo "\n";
+// // str replace php function
+// // Example 1: Basic String Replacement
+// $originalString = "Hello, world!";
+// $search = "world";
+// $replace = "PHP";
+// $newString = str_replace($search, $replace, $originalString);
+// echo $newString; // Outputs "Hello, PHP!"
+// echo "\n";
 
-// Example 2: Replacing Multiple Values
-$originalString = "The quick brown fox jumps over the lazy dog.";
-$search = ["quick", "brown", "jumps"];
-$replace = ["slow", "red", "turtles"];
-$newString = str_replace($search, $replace, $originalString);
-echo $newString; // Outputs "The slow red fox turtles over the lazy dog."
-echo "\n";
+// // Example 2: Replacing Multiple Values
+// $originalString = "The quick brown fox jumps over the lazy dog.";
+// $search = ["quick", "brown", "jumps"];
+// $replace = ["slow", "red", "turtles"];
+// $newString = str_replace($search, $replace, $originalString);
+// echo $newString; // Outputs "The slow red fox turtles over the lazy dog."
+// echo "\n";
 
-// Example 3: Using the $count Parameter
-$originalString = "one fish, two fish, red fish, blue fish";
-$search = "fish";
-$replace = "Dog";
-$count = 0;
-$newString = str_replace($search, $replace, $originalString, $count);
-echo $newString; // Outputs "one Dog, two Dog, red Dog, blue fish"
-echo "\n";
-echo $count; // Outputs 4
-echo "\n";
+// // Example 3: Using the $count Parameter
+// $originalString = "one fish, two fish, red fish, blue fish";
+// $search = "fish";
+// $replace = "Dog";
+// $count = 0;
+// $newString = str_replace($search, $replace, $originalString, $count);
+// echo $newString; // Outputs "one Dog, two Dog, red Dog, blue fish"
+// echo "\n";
+// echo $count; // Outputs 4
+// echo "\n";
 
-// Example 4: Replacing in an Array
-$array = ["apple", "banana", "cherry"];
-$search = "a";
-$replace = "o";
-$newArray = str_replace($search, $replace, $array);
-print_r($newArray); // Outputs Array ( [0] => opple, [1] => bonono, [2] => cherry )
-
-
-// strpos PHP function
-// Example 1: Basic Usage
-$haystack = "Hello, world!";
-$needle = "world";
-$position = strpos($haystack, $needle);
-echo $position; // Outputs 7
-echo "\n";
-
-// Example 2: Substring Not Found
-$haystack = "I Love my country";
-$needle = "country";
-$position = strpos($haystack, $needle);
-if ($position === false) {
-    echo "Substring Not Found";
-}else {
-    echo "Substring Found at Position: " . $position;
-}
-echo "\n";
-// Example 3: Using Offset
-$haystack = "Hello, world! Hello again! Hello again again!";
-$needle = "Hello";
-$offset = 16;
-$position = strpos($haystack, $needle, $offset);
-echo $position; // Outputs 27
-echo "\n";
-
-// Example 4: Case Sensitivity
-$haystack = "Hello, World!";
-$needle = "world";
-$position = stripos($haystack, $needle);
-if ($position === false) {
-    echo "Substring Not Found";
-}else {
-    echo "Substring Found at Position: " . $position; // Outputs 7 Because "world" is not case-sensitive
-}
+// // Example 4: Replacing in an Array
+// $array = ["apple", "banana", "cherry"];
+// $search = "a";
+// $replace = "o";
+// $newArray = str_replace($search, $replace, $array);
+// print_r($newArray); // Outputs Array ( [0] => opple, [1] => bonono, [2] => cherry )
 
 
-// explode PHP function
-// Example 1: Basic Usage
-$string = "apple,banana,charry";
-$delimiter = ",";
-$result = explode($delimiter, $string);
-print_r($result); // Outputs Array ( [0] => apple, [1] => banana, [2] => charry )
-echo "\n";
+// // strpos PHP function
+// // Example 1: Basic Usage
+// $haystack = "Hello, world!";
+// $needle = "world";
+// $position = strpos($haystack, $needle);
+// echo $position; // Outputs 7
+// echo "\n";
 
-// Example 2: Basic Usage
-$string = "daryazhuwxd@mail.ruLnWhdhx9:LnWhdhx9:YZ33 DPW4 2GUL FJBS 3X52 IABT S5D7 5K3P:22-Sep-91:https://www.facebook.com/profile.php?id=100022838703014";
-$delimiter = ":";
-$result = explode($delimiter, $string);
-print_r($result); // Outputs Array ([0] => daryazhuwxd@mail.ruLnWhdhx9[1] => LnWhdhx9 [2] => YZ33 DPW4 2GUL FJBS 3X52 IABT S5D7 5K3P [3] => 22-Sep-91 [4] => https[5] => //www.facebook.com/profile.php?id=100022838703014)
-echo "\n";
+// // Example 2: Substring Not Found
+// $haystack = "I Love my country";
+// $needle = "country";
+// $position = strpos($haystack, $needle);
+// if ($position === false) {
+//     echo "Substring Not Found";
+// }else {
+//     echo "Substring Found at Position: " . $position;
+// }
+// echo "\n";
+// // Example 3: Using Offset
+// $haystack = "Hello, world! Hello again! Hello again again!";
+// $needle = "Hello";
+// $offset = 16;
+// $position = strpos($haystack, $needle, $offset);
+// echo $position; // Outputs 27
+// echo "\n";
 
-// Example 3: Using Limit Parameter
-$string = "one|two|three|four|five";
-$delimiter = "|";
-$limit = 3;
-$result = explode($delimiter, $string, $limit);
-print_r($result); // Outputs Array ( [0] => one, [1] => two, [2] => three )
-echo "\n";
+// // Example 4: Case Sensitivity
+// $haystack = "Hello, World!";
+// $needle = "world";
+// $position = stripos($haystack, $needle);
+// if ($position === false) {
+//     echo "Substring Not Found";
+// }else {
+//     echo "Substring Found at Position: " . $position; // Outputs 7 Because "world" is not case-sensitive
+// }
 
-// Example 4: No Delimiter Found
-$string = "apple-banana-charry";
-$delimiter = ",";
-$result = explode($delimiter, $string);
-print_r($result); // Outputs Array ( [0] => apple-banana-charry )
-echo "\n";
 
-// Example 5: Empty String with Non-Empty Delimiter
-$string = "";
-$delimiter = ",";
-$result = explode($delimiter, $string);
-print_r($result); // Outputs Array ( [] )
+// // explode PHP function
+// // Example 1: Basic Usage
+// $string = "apple,banana,charry";
+// $delimiter = ",";
+// $result = explode($delimiter, $string);
+// print_r($result); // Outputs Array ( [0] => apple, [1] => banana, [2] => charry )
+// echo "\n";
+
+// // Example 2: Basic Usage
+// $string = "daryazhuwxd@mail.ruLnWhdhx9:LnWhdhx9:YZ33 DPW4 2GUL FJBS 3X52 IABT S5D7 5K3P:22-Sep-91:https://www.facebook.com/profile.php?id=100022838703014";
+// $delimiter = ":";
+// $result = explode($delimiter, $string);
+// print_r($result); // Outputs Array ([0] => daryazhuwxd@mail.ruLnWhdhx9[1] => LnWhdhx9 [2] => YZ33 DPW4 2GUL FJBS 3X52 IABT S5D7 5K3P [3] => 22-Sep-91 [4] => https[5] => //www.facebook.com/profile.php?id=100022838703014)
+// echo "\n";
+
+// // Example 3: Using Limit Parameter
+// $string = "one|two|three|four|five";
+// $delimiter = "|";
+// $limit = 3;
+// $result = explode($delimiter, $string, $limit);
+// print_r($result); // Outputs Array ( [0] => one, [1] => two, [2] => three )
+// echo "\n";
+
+// // Example 4: No Delimiter Found
+// $string = "apple-banana-charry";
+// $delimiter = ",";
+// $result = explode($delimiter, $string);
+// print_r($result); // Outputs Array ( [0] => apple-banana-charry )
+// echo "\n";
+
+// // Example 5: Empty String with Non-Empty Delimiter
+// $string = "";
+// $delimiter = ",";
+// $result = explode($delimiter, $string);
+// print_r($result); // Outputs Array ( [] )
 
 // Array Search PHP function
 // Example 1: Basic Usage
-$array = ["apple", "banana", "cherry"];
-$needle = "banana";
-$key = array_search($needle, $array);
-echo $key; // Outputs 1
-echo "\n";
+// $array = ["apple", "banana", "cherry"];
+// $needle = "banana";
+// $key = array_search($needle, $array);
+// echo $key; // Outputs 1
+// echo "\n";
 
+// // Example 2: Value Not Found
+// $array = ["apple", "banana", "cherry"];
+// $needle = "orange";
+// $key = array_search($needle, $array);
+// if ($key === false){
+//     echo "Value Not Found";
+// }else {
+//     echo "Value Found at Position: " . $key;
+// }
+
+// Example 3: Using Strict Parameter
+// $array = [1, "1", 2, "2"];
+// $needle = "2";
+// $key = array_search($needle, $array);
+// echo $key; // Outputs: 1
+// echo "\n";
+
+// $key_strict = array_search($needle, $array, true);
+// echo $key_strict; // Outputs: 3
+
+// if($key_strict === false){
+//     echo "value not found with strict checking";
+// }
+
+// // Example 4: Associative Array
+// $array = ["apple" => "red", "banana" => "yellow", "cherry" => "red"];
+// $needle = "yellow";
+// $key = array_search($needle, $array);
+// echo $key; 
 
