@@ -1,6 +1,6 @@
 <?php
 // ternary operator
-$n = 12;
+// $n = 12;
 /*
 if(12 == $n){
     echo "Twelve";
@@ -29,12 +29,16 @@ echo "\n";
 */
 
 // ternary operator
-/*
-$result = ($n % 2 == 0) ? "Even Number" : "Odd Number";
-echo $result;
-echo "\n";
-*/
 
-$result1 = ($n == 10) ? "Ten" : (($n == 12) ? "Twelve" : "Not Found");
+// $result = ($n % 2 == 0) ? "Even Number" : "Odd Number";
+// echo $result;
+// echo "\n";
 
-echo $result1;
+
+// $result1 = ($n == 10) ? "Ten" : (($n == 12) ? "Twelve" : "Not Found");
+// echo $result1;
+
+// Ternary operator
+$a = 30;
+$result2 = (10 == $a) ? "Ten" : ((20 == $a) ? "Twenty" : ((30 == $a) ? "Thirty" : "Not Found"));
+echo $result2;
