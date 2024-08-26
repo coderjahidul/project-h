@@ -99,3 +99,37 @@
 // echo "End of the program\n"; 
 
 
+// Declare an array
+// $students = ["Jahidul", "Islam", "Rahman", 123, "Rahim"];
+//$students = array("Jahidul", "Islam", "Rahman", 123, "Rahim");
+
+// Modify an array value int 123 to string "Rimi"
+//$students[3] = "Rimi";
+
+//var_dump($students); // Prints Array ( [0] => string(6) "Jahidul" [1] => string(5) "Islam" [2] => string(6) "Rahman" [3] => string(4) "Rimi" [4] => string(5) "Rahim" )
+
+
+// add new value in array at the end
+//$students[] = "Salma"; // add new value in the end of the array
+//$students = array_push($students, "Emon"); // add new value in the end of the array
+
+//var_dump($students); // Prints Array ( [0] => string(6) "Jahidul" [1] => string(5) "Islam" [2] => string(6) "Rahman" [3] => string(4) "Rimi" [4] => string(5) "Rahim" [5] => string(5) "Salma" [6] => string(5) "Emon" )
+
+// Declare an array
+$students = array("Jahidul", "Islam", "Rahman", "Rahim");
+array_unshift($students, "Yousuf"); // add new value in the start of the array
+
+//var_dump($students); // Prints Array ( [0] => string(6) "Yousuf" [1] => string(6) "Jahidul" [2] => string(5) "Islam" [3] => string(6) "Rahman" [4] => string(5) "Rahim" )
+
+$student = array_pop($students); // Remove the last value of the array
+
+//var_dump($student); // Prints string(5) "Rahim"
+//var_dump($students); // Prints Array ( [0] => string(6) "Yousuf" [1] => string(6) "Jahidul" [2] => string(5) "Islam" [3] => string(6) "Rahman" )
+
+$student = array_shift($students); // Remove the first value of the array
+
+var_dump($student); // Prints string(6) "Yousuf"
+var_dump($students); // Prints Array ( [0] => string(5) "Jahidul" [1] => string(5) "Islam" [2] => string(6) "Rahman" [3] => string(5) "Rahim" 
+
+
+
