@@ -149,15 +149,102 @@
 // // Call the printNumber function
 // printNumber(1, 50);
 
-function student_roll($first_roll, $last_roll, $stepping = 1){
-    if($first_roll>$last_roll){
-        return;
-    }
+// function student_roll($first_roll, $last_roll, $stepping = 1){
+//     if($first_roll>$last_roll){
+//         return;
+//     }
 
-    echo $first_roll . "\n";
-    $first_roll += $stepping;
+//     echo $first_roll . "\n";
+//     $first_roll += $stepping;
 
-    student_roll($first_roll, $last_roll, $stepping);
-}
+//     student_roll($first_roll, $last_roll, $stepping);
+// }
 
-student_roll(5, 50, 5);
+// student_roll(5, 50, 5);
+
+//****************************************************************** */
+// variable scope
+// $name = "Jahidul Islam"; 
+
+// function doSomething(){
+//     // global $name; // global scope
+//     // echo $name . "\n";
+
+//     echo $GLOBALS['name'] . "\n"; // global scope
+// }
+
+// doSomething();
+
+// function doExtra(){
+//     $name = "Jahidul Islam"; // local scope
+// }
+// doExtra();
+// echo $name . "\n";
+
+// function static_scope(){
+//     static $i; // static scope or static variable
+//     $i = $i ?? 0; // Null Coalescing Operator
+//     $i++;
+//     echo $i . "\n";
+// }
+
+// function static_scope_one(){
+//     static $i; // static scope or static variable
+//     $i = $i?? 0; // Null Coalescing Operator
+//     $i++;
+//     echo $i . "\n";
+// }
+
+// static_scope();
+// static_scope();
+// static_scope();
+// static_scope_one();
+// static_scope_one();
+// static_scope();
+// static_scope();
+// static_scope_one();
+// static_scope();
+// static_scope_one();
+
+//******************************************************************* */
+// function factrial($n){
+//     if($n <= 1){
+//         return 1;
+//     }
+//     return $n * factrial($n-1);
+// }
+
+// echo factrial(5);
+
+//****************************************************************** */
+// function fibonacci($old, $new, $start, $end){
+//     if($start>$end){
+//         return;
+//     }
+//     $start++;
+//     echo $old . " ";
+//     $_temp = $old + $new;
+//     $old = $new;
+//     $new = $_temp;
+//     fibonacci($old, $new, $start, $end);
+// }
+
+// fibonacci(1, 2, 0, 10);
+
+// function fibonacci($old, $new, $end){
+//     static $start; // static variable / static scope
+//     $start = $start ?? 0; // Null Coalescing Operator
+
+//     if($start>$end){
+//         return;
+//     }
+//     $start++;
+//     echo $old . " ";
+//     $_temp = $old + $new;
+//     $old = $new;
+//     $new = $_temp;
+
+//     fibonacci($old, $new, $end);
+// }
+
+// fibonacci(1, 2, 10);
