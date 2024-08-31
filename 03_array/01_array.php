@@ -128,8 +128,48 @@ $student = array_pop($students); // Remove the last value of the array
 
 $student = array_shift($students); // Remove the first value of the array
 
-var_dump($student); // Prints string(6) "Yousuf"
-var_dump($students); // Prints Array ( [0] => string(5) "Jahidul" [1] => string(5) "Islam" [2] => string(6) "Rahman" [3] => string(5) "Rahim" 
+//var_dump($student); // Prints string(6) "Yousuf"
+//var_dump($students); // Prints Array ( [0] => string(5) "Jahidul" [1] => string(5) "Islam" [2] => string(6) "Rahman" [3] => string(5) "Rahim" 
 
 
 
+// associative array 
+// $students_new = array(
+//     "Jahidul" => "Jahidul Islam",
+//     "Rahman" => "Rahman Islam",
+//     "Rahim" => "Rahim Islam",
+//     "Yousuf" => "Yousuf Islam"
+
+// );
+
+// var_dump($students_new["Yousuf"]);
+
+$foods = [
+    "vagetables" => "Potato, Tomato, Onion, Cabbage",
+    "fruits" => "Apple, Orange, Pear, Banana",
+    "drinks" => "Coke, Sprite, Water",
+    "meat" => "Beef, Chicken, Pork"
+];
+
+// var_dump($foods["vagetables"]);
+
+// echo $foods["vagetables"];
+
+// loop through an array
+// foreach($foods as $key => $value){
+//     echo $key . " = " . $value . "\n";
+// }
+
+// print the array keys
+// foreach($foods as $key=>$value){
+//     echo $key . "\n";
+// }
+
+$keys = array_keys($foods);
+print_r($keys);
+
+$values = array_values($foods);
+print_r($values);
+
+$foods["vagetables"] .= ", qwerty";
+print_r($foods);
