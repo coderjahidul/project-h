@@ -165,11 +165,12 @@ $foods = [
 //     echo $key . "\n";
 // }
 
-$keys = array_keys($foods);
-print_r($keys);
+// $keys = array_keys($foods);
+// print_r($keys);
 
-$values = array_values($foods);
-print_r($values);
+// $values = array_values($foods);
+// print_r($values);
 
-$foods["vagetables"] .= ", qwerty";
-print_r($foods);
+// $foods["vagetables"] .= ", qwerty";
+// print_r($foods);
+
