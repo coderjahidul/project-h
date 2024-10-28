@@ -36,3 +36,8 @@ if(key_exists("b", $fruits)){
 }else {
     echo "Key Not Found";
 }
+
+
+// array_keys function
+$keys = array_keys($fruits); // returns all the keys
+print_r($keys);
