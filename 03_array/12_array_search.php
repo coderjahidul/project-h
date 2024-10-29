@@ -39,5 +39,5 @@ if(key_exists("b", $fruits)){
 
 
 // array_keys function
-$keys = array_keys($fruits); // returns all the keys
+$keys = array_keys($fruits); // returns all the keysg
 print_r($keys);
