@@ -30,3 +30,13 @@ print_r($latter);
 // shuffle this latter array
 shuffle($latter);
 print_r($latter);
+
+// php associative array shuffle and array_rand function
+$fruits1 = array("z"=>"apple", "b"=>"banana", "c"=>"orange", "d"=>"plum", "e"=>"dates", "f"=>"mango", "g"=>"pineapple", "h"=>"strawberry");
+
+$key = array_rand($fruits1);
+// echo $key;
+echo $fruits1[$key];
+
+shuffle($fruits1);
+print_r($fruits1);
