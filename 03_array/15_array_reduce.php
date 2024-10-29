@@ -19,4 +19,4 @@ function sumEvenValue($old_value, $new_value){
 }
 
 $sumEvenValue = array_reduce($number, 'sumEvenValue');
-echo "Sum of Even Value: " . $sumEvenValue;
+echo "Sum of Even Value: " . $sumEvenValue; 
