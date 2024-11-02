@@ -1,6 +1,6 @@
 
 <?php 
-    require_once 'functions.php';
+    require_once '01_functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
