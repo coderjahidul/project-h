@@ -1,8 +1,4 @@
-<?php 
-    if(isset($_FILES['photo']) && $_FILES['photo']['error'] == 0){
-        move_uploaded_file($_FILES['photo']['tmp_name'], 'upload/image.png');
-    }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,25 +16,47 @@
                 <h2>File Upload</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos natus odit eligendi. Omnis architecto ut vel consectetur perspiciatis itaque natus.</p>
 
-                <pre>
+                <!-- <pre> -->
                     <p>
                         <?php
-                            print_r($_POST);
-                            print_r($_FILES);
+                            // print_r($_POST);
+                            // print_r($_FILES);
+                        ?>
+                        <?php 
+                            if(!is_dir('upload')){
+                                mkdir('upload', 0755, true);
+                            };
+                            
+
+                            if(isset($_FILES['photo']) && $_FILES['photo']['error'] == 0){
+                                $fileTypes = $_FILES['photo']['type'];
+                                $ending = explode('/', $fileTypes);
+                                $fileType = $ending[1];
+                                $allowed = array('jpg', 'jpeg', 'png', 'gif');
+                                $maxSize = 5 * 1024 * 1024; // 5MB
+                                $fileSize = $_FILES['photo']['size'];
+                                if(in_array($fileType, $allowed)){
+                                    if($fileSize <= $maxSize){
+                                        move_uploaded_file($_FILES['photo']['tmp_name'], 'upload/' . $_FILES['photo']['name']);
+                                        echo 'File uploaded successfully';
+                                    }else {
+                                        echo 'File too large. Please upload less than 5MB';
+                                    }
+                                    
+                                }else {
+                                    echo 'File type not allowed. Please Upload only ' . implode(', ', $allowed);
+                                }
+                                
+                            }
                         ?>
                     </p>
-                </pre>
+                <!-- </pre> -->
             </div>
             
         </div>
         <div class="row">
             <div class="column-60 column-offset-20">
                 <form method="POST" enctype="multipart/form-data">
-                    <label for="fname">First Name:</label>
-                    <input type="text" name="fname" id="fname">
-
-                    <label for="lname">Last Name:</label>
-                    <input type="text" name="lname" id="lname">
 
                     <label for="myfile">Select a file:</label>
                     <input type="file" name="photo" id="myfile">
