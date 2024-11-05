@@ -6,11 +6,26 @@
     echo "<br>";
     echo "<br>";
     echo "<br>";
+    // nl2br function
     echo nl2br($string);
     echo "<br>";
     echo "<br>";
     echo "<br>";
     echo "<br>";
     $string = "Lorem ipsum dolor sit amet consectetur adipisicing elit.\n\n Rerum animi cupiditate quos! Numquam voluptatibus ipsam laborum quae dolorem ducimus quia, asperiores magnam debitis, vel labore rerum.\n Id provident deserunt totam dolorem ex tempore facere, quis, quam in dicta similique officia vel, nisi vero mollitia omnis quidem ab cum sit facilis? Veritatis recusandae et ipsam? Cumque sapiente ipsam vero quam nostrum dicta aliquid incidunt magni quibusdam magnam fugit doloribus quo unde qui at dolorem minima, in amet alias! Exercitationem voluptatum adipisci autem quia ducimus nulla totam magnam rem, explicabo inventore ad voluptates fugiat recusandae et commodi veritatis dolore aut fugit beatae, in, sed quos illo suscipit sint.\n\n";
-
+    // nl2br function
     echo nl2br($string);
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    $string1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit.\n\n Rerum animi cupiditate quos! Numquam voluptatibus ipsam laborum quae dolorem ducimus quia, asperiores magnam debitis, vel labore rerum.\n Id provident deserunt totam dolorem ex tempore facere, quis, quam in dicta similique officia vel, nisi vero mollitia omnis quidem ab cum sit facilis? Veritatis recusandae et ipsam? Cumque sapiente ipsam vero quam nostrum dicta aliquid incidunt magni quibusdam magnam fugit doloribus quo unde qui at dolorem minima, in amet alias! Exercitationem voluptatum adipisci autem quia ducimus nulla totam magnam rem, explicabo inventore ad voluptates fugiat recusandae et commodi veritatis dolore aut fugit beatae, in, sed quos illo suscipit sint.";
+    // wordwrap function
+    $wordwrap = wordwrap($string1, 5, "\n", true);
+    echo nl2br($wordwrap);
+
+    // wordwrap function
+    $wordwrap2 = wordwrap($string1,35);
+    echo nl2br($wordwrap2);
+
