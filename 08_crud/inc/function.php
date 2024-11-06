@@ -75,7 +75,7 @@ function generateReport(){
             $student_lname = $student['lname'];
             $student_class = $student['class'];
             $student_age = $student['age'];
-            $basUrl = 'http://localhost:82/project-h/08_crud/index.php';
+            $basUrl = 'http://localhost/project-h/08_crud/index.php';
             ?>
             <tr>
                 <td><?php echo $student_roll; ?></td>
@@ -91,18 +91,68 @@ function generateReport(){
 
 // addStudent function
 function addStudent($fname, $lname, $class, $roll, $age){
+    $found = false;
     $data = file_get_contents(DB_NAME);
     $students = unserialize($data);
-    $new_student_id = count($students) + 1;
-    $student = array(
-        'id' => $new_student_id,
-        'roll' => $roll,
-        'fname' => $fname,
-        'lname' => $lname,
-        'class' => $class,
-        'age' => $age
-    );
-    array_push($students, $student);
-    $serializeData = serialize($students);
-    file_put_contents(DB_NAME, $serializeData, LOCK_EX);
+    foreach($students as $student){
+        if($student['roll'] == $roll){
+            $found = true;
+            break;
+        }
+    }
+    if(!$found){
+        $new_student_id = count($students) + 1;
+        $student = array(
+            'id' => $new_student_id,
+            'roll' => $roll,
+            'fname' => $fname,
+            'lname' => $lname,
+            'class' => $class,
+            'age' => $age
+        );
+        array_push($students, $student);
+        $serializeData = serialize($students);
+        file_put_contents(DB_NAME, $serializeData, LOCK_EX); 
+        return true;
+    }
+    return false;
+}
+
+// getStudent function
+function getStudent($id){
+    $serializeData = file_get_contents(DB_NAME);
+    $students = unserialize($serializeData);
+    foreach($students as $student){
+        $student_id = $student['id'];
+        if($student_id == $id){
+            return $student;
+        }
+    }
+    return false;
+}
+
+
+// updateStudent function
+function updateStudent($id, $fname, $lname, $class, $roll, $age){
+    $found = false;
+    $serializeData = file_get_contents(DB_NAME);
+    $students = unserialize($serializeData);
+    foreach($students as $student){
+        if($student['roll'] == $roll && $student['id'] != $id){
+            $found = true;
+            break;
+        }
+    }
+
+    if(!$found){
+        $students[$id-1]['fname'] = $fname;
+        $students[$id-1]['lname'] = $lname;
+        $students[$id-1]['class'] = $class;
+        $students[$id-1]['roll'] = $roll;
+        $students[$id-1]['age'] = $age;
+        $serializeData = serialize($students);
+        file_put_contents(DB_NAME, $serializeData, LOCK_EX);
+        return true;
+    }
+    return false;
 }

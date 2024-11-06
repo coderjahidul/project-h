@@ -1,5 +1,5 @@
 <?php
-$base_url = 'http://localhost:82/project-h/08_crud/index.php';
+$base_url = 'http://localhost/project-h/08_crud/index.php';
 ?>
 
 <p>
