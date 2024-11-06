@@ -69,13 +69,36 @@ fclose($fileOpen);
 // fclose($fileOpen);
 
 // Read the data csv format
-$fileOpen = fopen($fileName, 'r');
-while($student = fgetcsv($fileOpen)){
-    $student_id = $student[0];
-    $student_fname = $student[1];
-    $student_lname = $student[2];
-    $student_class = $student[3];
-    $student_age = $student[4];
-    printf("Student ID: %d \nStudent First Name: %s \nStudent Last Name: %s \nStudent Class: %s \nStudent Age: %d \n\n", $student_id, $student_fname, $student_lname, $student_class, $student_age);
+// $fileOpen = fopen($fileName, 'r');
+// while($student = fgetcsv($fileOpen)){
+//     $student_id = $student[0];
+//     $student_fname = $student[1];
+//     $student_lname = $student[2];
+//     $student_class = $student[3];
+//     $student_age = $student[4];
+//     printf("Student ID: %d \nStudent First Name: %s \nStudent Last Name: %s \nStudent Class: %s \nStudent Age: %d \n\n", $student_id, $student_fname, $student_lname, $student_class, $student_age);
+// }
+// fclose($fileOpen);
+
+// write a new student data
+// array(
+//     'id' => 4,
+//     'fname' => 'Salma',
+//     'lname' => 'Islam',
+//     'class' => '10',
+//     'age' => 18
+// );
+// $fileOpen = fopen($fileName, 'a'); // Open the file in append mode
+// fputcsv($fileOpen, $student); // Write the new data
+// fclose($fileOpen); // Close the file
+
+// Remove the specific data
+$data = file($fileName);
+print_r($data);
+unset($data[2]);
+print_r($data);
+$fileOpen = fopen($fileName, 'w');
+foreach($data as $value){
+    fwrite($fileOpen, $value);
 }
 fclose($fileOpen);
