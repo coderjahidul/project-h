@@ -1,9 +1,17 @@
 <?php
     include_once('inc/function.php');
-    $base_url = 'http://localhost/project-h/08_crud/index.php';
+    $base_url = 'http://localhost:82/project-h/08_crud/index.php';
     $info = '';
     $task = $_GET['task'] ?? 'report';
     $error = $_GET['error'] ?? '0';
+    if('delete' == $task){
+        $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+        if($id>0){
+            $result = deleteStudent($id);
+            header("Location: {$base_url}?task=report");
+            exit;
+        }
+    }
     if('seed' == $task){
         seed();
         $info = "Seeded Successfully";
@@ -149,5 +157,7 @@
     </div>
     <?php endif; ?>
 </div>
+<!-- Include js scripts file -->
+<script src="assetc/js/script.js"></script>
 </body>
 </html>

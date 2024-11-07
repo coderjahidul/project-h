@@ -75,14 +75,14 @@ function generateReport(){
             $student_lname = $student['lname'];
             $student_class = $student['class'];
             $student_age = $student['age'];
-            $basUrl = 'http://localhost/project-h/08_crud/index.php';
+            $basUrl = 'http://localhost:82/project-h/08_crud/index.php';
             ?>
             <tr>
                 <td><?php echo $student_roll; ?></td>
                 <td><?php echo $student_fname . ' ' . $student_lname; ?></td>
                 <td><?php echo $student_class; ?></td>
                 <td><?php echo $student_age; ?></td>
-                <td><a href="<?php echo $basUrl . '?task=edit&id=' . $student_id; ?>">Edit</a>|<a href="<?php echo $basUrl . '?task=delete&id=' . $student_id; ?>">Delete</a></td>
+                <td><a href="<?php echo $basUrl . '?task=edit&id=' . $student_id; ?>">Edit</a>|<a class="delete" href="<?php echo $basUrl . '?task=delete&id=' . $student_id; ?>">Delete</a></td>
             </tr>
         <?php } ?>
     </table>
@@ -101,7 +101,7 @@ function addStudent($fname, $lname, $class, $roll, $age){
         }
     }
     if(!$found){
-        $new_student_id = count($students) + 1;
+        $new_student_id = getNewId($students);
         $student = array(
             'id' => $new_student_id,
             'roll' => $roll,
@@ -155,4 +155,19 @@ function updateStudent($id, $fname, $lname, $class, $roll, $age){
         return true;
     }
     return false;
+}
+
+// deleteStudent function
+function deleteStudent($id){
+    $serializeData = file_get_contents(DB_NAME);
+    $students = unserialize($serializeData);
+    unset($students[$id-1]);
+    $serializeData = serialize($students);
+    file_put_contents(DB_NAME, $serializeData, LOCK_EX);
+}
+
+// getNewId function
+function getNewId($students){
+    $maxId = max(array_column($students, 'id'));
+    return $maxId + 1;
 }
