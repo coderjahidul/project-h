@@ -1,6 +1,6 @@
 <?php
     include_once('inc/function.php');
-    $base_url = 'http://localhost:82/project-h/08_crud/index.php';
+    $base_url = 'http://localhost/project-h/08_crud/index.php';
     $info = '';
     $task = $_GET['task'] ?? 'report';
     $error = $_GET['error'] ?? '0';
@@ -102,7 +102,7 @@
         $student = getStudent($id);
         if($student):
     ?>
-    <div class="row"></div>
+    <div class="row">
         <div class="column column-60 column-offset-20">
             <form method="POST" action="<?php echo $base_url; ?>?task=edit">
                 

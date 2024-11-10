@@ -75,7 +75,7 @@ function generateReport(){
             $student_lname = $student['lname'];
             $student_class = $student['class'];
             $student_age = $student['age'];
-            $basUrl = 'http://localhost:82/project-h/08_crud/index.php';
+            $basUrl = 'http://localhost/project-h/08_crud/index.php';
             ?>
             <tr>
                 <td><?php echo $student_roll; ?></td>

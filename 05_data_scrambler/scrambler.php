@@ -69,7 +69,7 @@
             <p>
             <?php
                 // Define the base URL
-                $baseURL = 'http://localhost:82/project-h/05_data_scrambler/';
+                $baseURL = 'http://localhost/project-h/05_data_scrambler/';
 
                 ?>
 
