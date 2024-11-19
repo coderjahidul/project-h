@@ -99,5 +99,29 @@ class ChildClass extends ParentClass {
 }
 
 // Late static binding example
-ParentClass::callwho(); // I am a Parent Class
-ChildClass::callwho(); // I am a Child Class
+// ParentClass::callwho(); // I am a Parent Class
+// ChildClass::callwho(); // I am a Child Class
+
+
+/*******************************************************************************/
+class MathCalculator {
+    private $number;
+    static $name;
+    static function fibonacci($n){
+        self::$name = "Jahidul Islam";
+        echo "Fibonacci Series up to {$n} name is " . self::$name . " \n";
+    }
+
+    function factorial($n){
+        self::$name = "Sabuz";
+        $this->number = 12;
+        echo self::$name . " Calculating Factorial of " . ($n + $this->number) . "\n";
+    }
+}
+
+$mathe = new MathCalculator();
+$mathe->fibonacci(10);
+echo $mathe->factorial(15) . "\n";
+
+// call static method without creating an instance
+MathCalculator::fibonacci(10) . "\n";
