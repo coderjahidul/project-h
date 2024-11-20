@@ -109,7 +109,12 @@ class MathCalculator {
     static $name;
     static function fibonacci($n){
         self::$name = "Jahidul Islam";
+        self::doSomthidng();
         echo "Fibonacci Series up to {$n} name is " . self::$name . " \n";
+    }
+
+    static function doSomthidng(){
+        echo "Do Something \n";
     }
 
     function factorial($n){
