@@ -1,5 +1,5 @@
 <?php
-class DistrictCollection {
+class DistrictCollection implements IteratorAggregate, Countable {
     private $districts = [];
 
     function add($districts){
@@ -8,6 +8,14 @@ class DistrictCollection {
 
     function getDistricts(){
         return $this->districts;
+    }
+
+    function getIterator(): Traversable{
+        return new ArrayIterator($this->districts);
+    }
+
+    function count(){
+        return count($this->districts);
     }
 }
 
@@ -20,8 +28,11 @@ $districts->add("Sylhet");
 $districts->add("Khulna");
 $districts->add("Rangpur");
 $districts->add("Mymensingh");
+$districts->add("Barisal");
 
-$districts = $districts->getDistricts();
-foreach($districts as $district){
-    echo $district . "\n";
-}
+// $_districts = $districts->getDistricts();
+// foreach($districts as $district){
+//     echo $district . "\n";
+// }
+
+echo count($districts) . "\n";
