@@ -1,7 +1,7 @@
 <?php 
-class Planet{
+class Planet_Mars{
     public function getName(){
-        echo "Earth";
+        echo "Mars";
     }
 }
 ?>
