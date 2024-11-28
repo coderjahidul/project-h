@@ -50,6 +50,10 @@ class MotorCycle{
     function __set($name, $value){
         $this->parameter[$name] = $value;
     }
+
+    function __call($name, $arguments){
+
+    }
 }
 
 $pulsar = new MotorCycle('250cc', '16ltr', '30km');
@@ -64,6 +68,31 @@ if(isset($pulsar->tiresize)){
 }else{
     echo "Not Found";
 }
+
+unset($pulsar->mileage);
+$pulsar->run();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 echo "\n";
 // Car
 class Car{
