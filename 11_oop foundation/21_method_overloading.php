@@ -51,7 +51,22 @@ class MotorCycle{
         $this->parameter[$name] = $value;
     }
 
+    function __call($name, $arguments){
+        if("run" == $name){
+            if($arguments){
+                echo "I am running at {$arguments[0]} \n";
+            }else{
+                echo "I am running \n";
+            }
+        }
+    }
+
+    static function __callStatic($name, $arguments){
+        echo "Static Call \n";
+    }
 }
+
+MotorCycle::wash();
 
 $pulsar = new MotorCycle('250cc', '16ltr', '30km');
 // echo $pulsar->displacement;
@@ -66,6 +81,8 @@ if(isset($pulsar->tiresize)){
     echo "Not Found";
 }
 
+unset($pulsar->mileage);
+$pulsar->run('100kmph');
 
 
 
