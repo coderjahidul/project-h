@@ -25,19 +25,20 @@
 // (new SpaceShip)->launch();
 // echo "\n";
 // (new Planet_Mars)->getName();
-function autoload($name){
-    if(strpos($name, "Planet_") !== false){
-        $filename = str_replace("Planet_", "", $name);
-        include strtolower("{$filename}.php");
-    }else{
-        include strtolower("{$name}.php");
-    }
-}
-spl_autoload_register("autoload");
-(new SpaceShip)->launch();
-echo "\n";
-(new Bike)->getType();
-echo "\n";
-(new Planet)->getName();
-echo "\n";
-(new Planet_Mars)->getName();
+
+// function autoload($name){
+//     if(strpos($name, "Planet_") !== false){
+//         $filename = str_replace("Planet_", "", $name);
+//         include strtolower("{$filename}.php");
+//     }else{
+//         include strtolower("{$name}.php");
+//     }
+// }
+// spl_autoload_register("autoload");
+// (new SpaceShip)->launch();
+// echo "\n";
+// (new Bike)->getType();
+// echo "\n";
+// (new Planet)->getName();
+// echo "\n";
+// (new Planet_Mars)->getName();
