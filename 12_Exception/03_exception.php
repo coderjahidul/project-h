@@ -6,6 +6,7 @@ class DiskFullException extends Exception{}
 interface NetworkStorage{
     function connect();
     function getName();
+    function report($data);
 }
 
 class MySQLServer implements NetworkStorage{
@@ -16,25 +17,38 @@ class MySQLServer implements NetworkStorage{
     function getName(){
         return "MySQL";
     }
+
+    function report($data){
+        
+    }
 }
 
 class PostgreSQLServer implements NetworkStorage{
     function connect(){
-        return $this;
+        throw new ServerLoadException;
     }
 
     function getName(){
         return "PostgreSQL";
     }
+
+    function report($data){
+        
+    }
 }
 
 class MSSQLServer implements NetworkStorage{
     function connect(){
-        throw new NetworkException;
+        // throw new NetworkException;
+        return $this;
     }
 
     function getName(){
         return "MSSQL";
+    }
+
+    function report($data){
+        
     }
 }
 
@@ -55,6 +69,7 @@ class ConnectionPool{
                 $this->connection = $storage->connect();
             }catch(ServerLoadException $e){
                 echo $storage->getName()." is facing huge load\n";
+                $storage->report(array('ip' => '127.0.0.1', 'error' => 'load'));
             }catch(NetworkException $e){
                 echo $storage->getName()." is facing network issue\n";
             }catch(DiskFullException $e){
