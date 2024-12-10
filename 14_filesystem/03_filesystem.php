@@ -41,9 +41,10 @@ $directory = new Dir(getcwd());
 print_r($directory->getDirectories());
 print_r($directory->getFile());
 
-$oop = $directory->getDirectory(4);
+$oop = $directory->getDirectory(11);
 print_r($oop->getDirectories());
 print_r($oop->getFile());
 
-$foundation = $oop->getDirectory(0);
+$foundation = $oop->getDirectory(1);
+print_r($foundation->getDirectories());
 print_r($foundation->getFile());
