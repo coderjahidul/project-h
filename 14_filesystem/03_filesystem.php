@@ -25,7 +25,7 @@ class Dir{
         }else{
             throw new Exception("Directory not found");
         }
-        return false;
+        // return false;
     }
 
     public function getDirectories(){
