@@ -53,14 +53,31 @@ class Penguin extends WalkingBird{
     }
 }
 
+class Duck extends FlyingBird{
+    function eat(){
+        echo "Duck is eating\n";
+    }
+
+    function sleep(){
+        echo "Duck is sleeping\n";
+    }
+
+    function fly(){
+        echo "Duck is flying\n";
+    }
+}
+
 // Example 
 $birdManager = new BirdManager();
 $eagle = new Eagle();
 $penguin = new Penguin();
-
+$duck = new Duck();
 
 $birdManager->maintainBird($eagle);
 $birdManager->moveFlayingBird($eagle);
 echo "\n";
 $birdManager->maintainBird($penguin);
 $birdManager->moveWalkingBird($penguin);
+echo "\n";
+$birdManager->maintainBird($duck);
+$birdManager->moveFlayingBird($duck);
