@@ -1,0 +1,1 @@
+PHP Warning:  Undefined variable $book in C:\laragon\www\project-h\17_php_error\01_php_error.php on line 11
