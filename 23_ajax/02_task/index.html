@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitting a Form via AJAX</title>
+</head>
+<body>
+    <form id="userForm">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <br>
+        <br>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br>
+        <br>
+        <input type="text" name="phone" placeholder="Enter your phone" required>
+        <br>
+        <br>
+        <input type="text" name="address" placeholder="Enter your address" required>
+        <br>
+        <br>
+        <textarea name="message" placeholder="Enter your message"></textarea>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <div id="response"></div>
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(e){
+            e.preventDefault(); // Prevent form submission
+
+            const formData = new FormData(this);
+
+            fetch('./submit_form.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('response').innerHTML = data;
+            }).catch(error=>{
+                document.getElementById('response').innerHTML = 'Error: ' + error;
+            });
+        });
+    </script>
+</body>
+</html>
