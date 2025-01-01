@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP and Ajax Example</title>
+</head>
+<body>
+    <h1>Fetch User Data</h1>
+    <button id="fetchButton">Get User</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('fetchButton').addEventListener('click', function(){
+            // Create and AJAX request
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', './fetch_user.php', true);
+            xhr.onload = function(){
+                if(xhr.status === 200){
+                    document.getElementById('result').innerHTML = xhr.responseText;
+                }else{
+                    document.getElementById('result').innerHTML = 'Error: ' + xhr.status;
+                }
+            };
+            xhr.send();
+        });
+    </script>
+
+</body>
+</html>
