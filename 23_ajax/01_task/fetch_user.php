@@ -5,6 +5,6 @@ $userData = [
     'age' => 24
 ];
 
-$result = json_encode($userData);
+$result = json_encode($userData, JSON_PRETTY_PRINT);
 print_r($result);
 ?>
