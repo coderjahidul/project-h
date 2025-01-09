@@ -1,4 +1,5 @@
 <?php
+namespace App;
 class Calculator {
     function add (...$operands){
         return array_sum($operands);
